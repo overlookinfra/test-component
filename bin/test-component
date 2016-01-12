@@ -1,0 +1,6 @@
+#!/usr/bin/env ruby
+
+require 'test/component/runner'
+
+runner = Test::Component::Runner.new(ARGV)
+runner.run!
