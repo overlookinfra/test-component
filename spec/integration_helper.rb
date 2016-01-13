@@ -1,7 +1,7 @@
 module IntegrationHelpers
   module Platform
     def self.windows?
-      !!(RbConfig::CONFIG['target_os'] =~ /windows/)
+      !!(RbConfig::CONFIG['target_os'] =~ /mingw/)
     end
 
     def self.osx?
