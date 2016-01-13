@@ -9,3 +9,7 @@ end
 task :acceptance do
   sh('rspec spec/acceptance')
 end
+
+namespace :ci do
+  task :spec => [:unit, :integration]
+end
