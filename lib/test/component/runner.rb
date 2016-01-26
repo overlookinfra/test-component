@@ -46,7 +46,7 @@ module Test
 
       def get_os_name
         case RbConfig::CONFIG['target_os']
-        when /windows/ then 'windows'
+        when /mingw/   then 'windows'
         when /darwin/  then 'osx'
         when /linux/   then 'linux'
         end
