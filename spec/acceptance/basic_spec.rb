@@ -1,4 +1,7 @@
 require 'acceptance_helper'
 
-describe 'Hello World' do
+describe 'our little test component' do
+  describe command('/opt/puppetlabs/test/bin/test-component') do
+    its(:stdout) { should match /Hello/ }
+  end
 end
