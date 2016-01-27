@@ -34,6 +34,7 @@ group(:system_tests) do
   gem 'beaker-hostgenerator', *location_for(ENV['BEAKER_HOSTGENERATOR_LOCATION'] || '~> 0.3')
   gem 'beaker', *location_for(ENV['BEAKER_LOCATION'] || '~> 2.32')
   gem 'beaker-rspec', *location_for(ENV['BEAKER_RSPEC_LOCATION'] || '~> 5.0')
+  gem 'yarjuf', '~> 2.0'
 end
 
 group(:docs) do

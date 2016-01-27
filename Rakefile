@@ -1,16 +1,17 @@
 desc 'Run portable unit tests with RSpec'
 task :unit do
-  sh('rspec spec/unit')
+  sh('rspec --require rspec/legacy_formatters -r yarjuf -f JUnit -o result.xml spec/unit')
 end
 
 desc 'Run integration tests against the local machine with RSpec'
 task :integration do
-  sh('rspec spec/integration')
+  sh('rspec --require rspec/legacy_formatters -r yarjuf -f JUnit -o result.xml spec/integration')
 end
 
 desc 'Run remote acceptance tests with RSpec and Beaker'
 task :acceptance do
-  sh('rspec spec/acceptance')
+  sh('mkdir -p junit/latest')
+  sh('rspec --require rspec/legacy_formatters -r yarjuf -f JUnit -o junit/latest/result.xml spec/acceptance')
 end
 
 desc 'Run a little bit of this and a little bit of that'
