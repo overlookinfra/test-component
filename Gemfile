@@ -20,6 +20,7 @@ gemspec
 group(:development, :test) do
   gem 'rspec', '~> 3.1', :require => false
   gem 'yarjuf', '~> 2.0'
+  gem 'rspec-legacy_formatters'
   gem 'rake', '~> 10.0'
   gem 'rubocop', '~> 0.26.1', :platforms => [:ruby]
   gem 'pry'
@@ -35,6 +36,7 @@ group(:system_tests) do
   gem 'beaker', *location_for(ENV['BEAKER_LOCATION'] || '~> 2.32')
   gem 'beaker-rspec', *location_for(ENV['BEAKER_RSPEC_LOCATION'] || '~> 5.0')
   gem 'yarjuf', '~> 2.0'
+  gem 'rspec-legacy_formatters'
 end
 
 group(:docs) do
